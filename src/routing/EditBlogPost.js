@@ -1,8 +1,11 @@
+import { useParams } from "react-router-dom";
+import EditPost from "../components/EditPost"
+
 function EditBlogPost() {
+    const { id } = useParams();
+
     return (
-        <div>
-            <p>page EditBlogPost</p>
-        </div>
+        <EditPost id={id}/>
     )
 }
 export default EditBlogPost

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function PostsList() {
@@ -18,14 +19,23 @@ function PostsList() {
         return (
             <div>
                 {posts.map(post => (
-                    <div key={post.id} class="card">
-                        <div class="card-content">
-                            <h2>{post.title}</h2>
-                            <div class="content">
-                                {post.body}
+                        <div key={post.id} className="card">
+                            <div className="card-content">
+                                <h2><strong>{post.title}</strong></h2>
+                                <div className="content">
+                                    {post.body}
+                                </div>
+                                <Link to={`/postdetails/${post.id}`}>
+                                    <button className='button'>See more details</button>
+                                </Link>
+                                <Link to={`/delete/${post.id}`}>
+                                    <button className='button'>Delete the post</button>
+                                </Link>
+                                <Link to={`/edit/${post.id}`}>
+                                    <button className='button'>Edit the post</button>
+                                </Link>
                             </div>
                         </div>
-                    </div>
                 ))}
             </div>
     );

@@ -18,15 +18,15 @@ export const router = createBrowserRouter([{
             element: <HomePage />
         },
         {
-            path: 'creer',
+            path: 'postdetails/:id',
             element: <BlogPost />
         },
         {
-            path: 'edit',
+            path: 'edit/:id',
             element: <EditBlogPost />
         },
         {
-            path: 'delete',
+            path: 'delete/:id',
             element: <DeleteBlogPost />
         },
 

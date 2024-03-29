@@ -1,8 +1,12 @@
+import { useParams } from "react-router-dom";
+import DeletePost from "../components/DeletePost";
+
 function DeleteBlogPost() {
+
+    const { id } = useParams();
+
     return (
-        <div>
-            <p>page DeleteBlogPost</p>
-        </div>
+        <DeletePost id={id}/>
     )
 }
 export default DeleteBlogPost
