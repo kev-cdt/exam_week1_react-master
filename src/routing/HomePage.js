@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PostsList from '../components/PostsList'
+
 function HomePage() {
   useEffect(() => {
     // @TODO - fetching post blogs from the server...
@@ -17,6 +19,7 @@ function HomePage() {
       <Link to='/edit'>éditer</Link>
       <br></br>
       <Link to='/delete'>delete</Link>
+      <PostsList/>
     </>
   );
 }
