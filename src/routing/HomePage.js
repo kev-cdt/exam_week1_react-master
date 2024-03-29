@@ -14,9 +14,9 @@ function HomePage() {
       <p>...</p>
       <Link to='/creer'>Creer mon annonce</Link>
       <br></br>
-      <Link to='./edit'>éditer</Link>
+      <Link to='/edit'>éditer</Link>
       <br></br>
-      <Link to='./delete'>delete</Link>
+      <Link to='/delete'>delete</Link>
     </>
   );
 }

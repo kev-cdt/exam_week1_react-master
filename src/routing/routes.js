@@ -3,13 +3,18 @@ import HomePage from './HomePage';
 import BlogPost from './BlogPost';
 import DeleteBlogPost from './DeleteBlogPost'
 import EditBlogPost from './EditBlogPost'
+import Layout from './Layout';
 
 export const router = createBrowserRouter([{
     path: '/',
-    element: <HomePage />,
+    element: <Layout />,
     children: [
         {
             index: true,
+            element: <HomePage />
+        },
+        {
+            path: '/',
             element: <HomePage />
         },
         {
